@@ -1,6 +1,6 @@
 chef-test
 ===============
-A simple set of recipes to :
+A simple set of recipes to
 1) Install nginx on a web server
 2) Install GOALANG on two other servers.
 3) Configure the web server and golang servers so that requests to the web server are balanced in a round-robin fashion to the two golang servers and these servers then present web pages identifying the host that serviced the request.
