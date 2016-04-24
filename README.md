@@ -9,9 +9,9 @@ A simple set of recipes to
 3) Configure the web server and golang servers so that requests to the web server are balanced in a round-robin fashion to the 
 two golang servers and these servers then present web pages identifying the host that serviced the request.
 
-The web server host (NODE1) has the run list install_nginx and goapp_nginx.
+The web server host (NODE1) has the run list "install_nginx" and "goapp_nginx".
 
-The golang servers (NODE3 and NODE4) have the run lists install_golang and goapp.
+The golang servers (NODE3 and NODE4) have the run lists "install_golang" and "goapp".
 
 To apply the cookbooks:
 
