@@ -1,80 +1,29 @@
 # goapp_nginx Cookbook
 
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwich.
+This cookbook will reconfigure the nginx web serevr to redirect all http requests to two satellite nodes on port 8484 in a round robin fashion.
+The process will:
+Replace the nginx default.conf file with one having placeholders for the node names. 
+Modify the valuies in the default.conf file with the three hosts identified in the attributes.
+Reload the nginx service.
 
 ## Requirements
 
-TODO: List your cookbook requirements. Be sure to include any requirements this cookbook has on platforms, libraries, other cookbooks, packages, operating systems, etc.
-
-e.g.
-### Platforms
-
-- SandwichOS
-
-### Chef
-
-- Chef 12.0 or later
-
-### Cookbooks
-
-- `toaster` - goapp_nginx needs toaster to brown your bagel.
+nginx installed.
 
 ## Attributes
 
-TODO: List your cookbook attributes here.
+default[:goapp] = {'wserver' => "ambari1", 'rrobin1' => "ambari3", 'rrobin2' => "ambari4"}
 
-e.g.
-### goapp_nginx::default
-
-<table>
-  <tr>
-    <th>Key</th>
-    <th>Type</th>
-    <th>Description</th>
-    <th>Default</th>
-  </tr>
-  <tr>
-    <td><tt>['goapp_nginx']['bacon']</tt></td>
-    <td>Boolean</td>
-    <td>whether to include bacon</td>
-    <td><tt>true</tt></td>
-  </tr>
-</table>
-
-## Usage
+Where 
+"wserver" identifies the host acting as the web server. ## Just realised I should have got the host name locally but I've left it too late to change it right now. Maybe Monday morning.
+"rrobin1"  identifies the host acting as the first go aplication server in the round robin list.
+"rrobin2"  identifies the host acting as the second go aplication server in the round robin list.
 
 ### goapp_nginx::default
 
-TODO: Write usage instructions for each cookbook.
-
-e.g.
-Just include `goapp_nginx` in your node's `run_list`:
-
-```json
-{
-  "name":"my_node",
-  "run_list": [
-    "recipe[goapp_nginx]"
-  ]
-}
-```
-
-## Contributing
-
-TODO: (optional) If this is a public cookbook, detail the process for contributing. If this is a private cookbook, remove this section.
-
-e.g.
-1. Fork the repository on Github
-2. Create a named feature branch (like `add_component_x`)
-3. Write your change
-4. Write tests for your change (if applicable)
-5. Run the tests, ensuring they all pass
-6. Submit a Pull Request using Github
+Just include `goapp_nginx` in the node `run_list`:
 
 ## License and Authors
 
-Authors: TODO: List authors
+Authors: Paul Hallam
 
