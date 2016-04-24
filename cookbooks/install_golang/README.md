@@ -1,4 +1,4 @@
-This is a simple recipe to install the GOLANG software.
+This is a simple cookbook to install the GOLANG software on a Red Hat 7 system.
 
 This recipe will:
 
