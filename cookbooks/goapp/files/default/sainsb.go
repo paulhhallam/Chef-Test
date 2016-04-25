@@ -6,7 +6,7 @@ import (
 )
 func handler(w http.ResponseWriter, r *http.Request) {
  h, _:= os.Hostname()
- fmt.Fprintf(w, "Hi there, I'm served from HOST %s!", h)
+ fmt.Fprintf(w, "Hi there, I'm served from HOSTNAME %s!", h)
 }
 func main() {
  http.HandleFunc("/",handler)
