@@ -1,6 +1,6 @@
 chef-test
 ===============
-A simple set of recipes to
+A simple set of recipes to perform the following:
 
 1) Install nginx on a web server
 
