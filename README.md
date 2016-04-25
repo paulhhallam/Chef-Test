@@ -2,7 +2,7 @@ chef-test
 ===============
 A simple set of recipes to perform the following:
 
-1) Install nginx on a web server
+1) Install nginx on a web server.
 
 2) Install GOALANG on two other servers.
 
