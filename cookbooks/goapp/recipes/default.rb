@@ -20,5 +20,5 @@ end
 # start the go app as a service and set it to restart
 #
 service "goapp" do
-  action [ :enable, :start ]
+  action [ :enable, :restart ]
 end
